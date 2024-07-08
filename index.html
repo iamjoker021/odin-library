@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>My Library</h1>
+        <nav>
+            <button class="add-button" type="button">Add New Book</button>
+        </nav>
+    </header>
+    <dialog>
+        <form>
+            <div class="row">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="row">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+            </div>
+            <div class="row">
+                <label for="noOfPages"># of Pages</label>
+                <input type="number" name="noOfPages" id="noOfPages" min="1" step="1" required>
+            </div>
+            <div class="row">
+                <label for="isRead">Is Already Read?</label>
+                <input type="checkbox" name="isRead" id="isRead">
+            </div>
+            <div class="row">
+                <button type="submit" class="add-book">Submit</button>
+                <button type="button" class="close-dialog">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+    <section class="books-container">
+        <!-- Add Books -->
+    </section>
+</body>
+</html>

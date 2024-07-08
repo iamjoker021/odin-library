@@ -1,0 +1,144 @@
+/* Init */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*** Style and Typograpghy ***/
+
+body {
+    background-image: linear-gradient(90deg, burlywood, bisque);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 24px;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+button {
+    border-radius: 50px;
+    border: 0;
+    background-color: brown;
+    color: white;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+button:active {
+    background-color: rgb(187, 42, 42);
+}
+
+header button {
+    font-size: 20px;
+    padding: 16px 48px;
+}
+
+div.book {
+    background-image: linear-gradient(rgb(224, 114, 114), rgb(235, 164, 164));
+    margin: 16px;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input[type='checkbox'] {
+    width: auto;
+    margin-right: auto;
+}
+
+dialog {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    border-radius: 16px;
+    border: 0
+}
+
+dialog form {
+    height: 100%;
+    padding: 16px;
+}
+
+/*** Layout ***/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+section {
+    flex: 1 1 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+    justify-content: space-between;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+section > div > div {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+dialog form div {
+    flex: 1 1 0;
+}
+
+dialog form div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+/*
+
+.book {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 10%));
+    grid-template-rows: repeat(5, minmax(50px, 10%));
+}
+
+.book h3, .book button {
+    grid-column: 1 / 3;
+}
+
+.book .key-info {
+    grid-column: 1 / 2;
+}
+
+.book .value-info {
+    grid-column: 2 / 3;
+} */
