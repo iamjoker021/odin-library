@@ -25,11 +25,13 @@ let myLibrary = [
     }                
 ];
 
-function Book(title, author, noOfPages, isRead) {
-    this.title = title,
-    this.author = author,
-    this.noOfPages = noOfPages,
-    this.isRead = isRead
+class Book {
+    constructor(title, author, noOfPages, isRead) {
+        this.title = title,
+        this.author = author,
+        this.noOfPages = noOfPages,
+        this.isRead = isRead
+    }
 }
 
 function addBookToLibrary(title, author, noOfPages, isRead=false) {
