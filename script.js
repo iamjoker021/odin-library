@@ -141,3 +141,36 @@ addBookForm.addEventListener('submit',(event) => {
     const data = new FormData(event.target);
     addBookToLibrary(...data.entries().map((d) => d[1]));
 });
+
+
+// Form Validation
+const titleInput = document.querySelector('dialog > form input#title');
+const titleError = document.querySelector('dialog > form span.error');
+console.log(titleInput, titleError)
+titleInput.addEventListener('input', () => {
+    if (titleInput.validity.valid) {
+        titleError.textContent = "";
+    }
+    else {
+        showError();
+    }
+})
+
+titleInput.addEventListener('submit', (event) => {
+    if (!titleInput.validity.valid) {
+        showError();
+    }
+    event.preventDefault();
+})
+
+const showError = () => {
+    if (titleInput.validity.valueMissing) {
+        titleError.textContent = 'PLease enter the title for you book, if you read any';
+    }
+    else if (titleInput.validity.tooShort) {
+        titleError.textContent = 'Did you really read book?';
+    }
+    else if (titleInput.validity.tooLong) {
+        titleError.textContent = 'Woah! only title name not its content';
+    }
+}
